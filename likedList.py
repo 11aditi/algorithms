@@ -12,11 +12,11 @@ class LinkedList :
     def __init__(self):
         self.head = None
 
-    def printLinkedList(self,firstNodeOfLinkList):
-        temp = firstNodeOfLinkList
-        while (temp):
-            print(temp.inputDatainConstructor)
-            temp = temp.next
+    # def printLinkedList(self,firstNodeOfLinkList):
+    #     temp = firstNodeOfLinkList
+    #     while (temp):
+    #         print(temp.inputDatainConstructor)
+    #         temp = temp.next
 
     def findLengthOfLinkList (self,firstNodeOfLinkList):
         temp = firstNodeOfLinkList
@@ -46,6 +46,19 @@ class LinkedList :
         fast = fast.next.next
       print ("The value at middle node is:",slow.inputDatainConstructor )
 
+    def findLoop(self,Node1):
+        slow= Node1
+        fast = Node1
+        while (fast):
+            slow = slow.next
+            fast = fast.next.next
+            if slow == fast :
+                print ("Loop exists")
+                break
+            else :
+                print ('Loop not found')
+
+
 if __name__=='__main__':
     refVariable = LinkedList()
     refVariable.head = Node(("Aditi","Sep","Shivin","dhwani",))
@@ -63,13 +76,14 @@ if __name__=='__main__':
     sixthNode.next = None
     #print(thirdNode.test)
 
-    refVariable.printLinkedList(refVariable.head)
-    length=refVariable.findLengthOfLinkList(refVariable.head)
-    print ("The length of linked list is :", length)
+    #refVariable.printLinkedList(refVariable.head)
+    #length=refVariable.findLengthOfLinkList(refVariable.head)
+    #print ("The length of linked list is :", length)
 
 
-    refVariable.printMidNode(refVariable.head,length)
-    refVariable.printMiddleNodeLC(refVariable.head)
+    #refVariable.printMidNode(refVariable.head,length)
+    #refVariable.printMiddleNodeLC(refVariable.head)
+    refVariable.findLoop(refVariable.head)
 
 
 
