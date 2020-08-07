@@ -1,5 +1,5 @@
 #class definition starts, a class can have many functions and varaibles.
-# All the functions and variables presnt inside cllass are its memebers
+# All the functions and variables present inside class are its memebers
 class BinarySearchClass:
     #function definition starts
     def FindArrayElement (sortedInputArray, elementToBeSearched) :
